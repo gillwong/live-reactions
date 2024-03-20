@@ -37,9 +37,7 @@ wss.on("connection", (ws) => {
     const parsed = JSON.parse(message.toString()) as Message;
     if (parsed.type === "message") {
       for (const [client, socket] of clients) {
-        console.log({ client, id, len: clients.size });
         if (client !== id) {
-          console.log("sending replies")
           socket.send(JSON.stringify(parsed));
         }
       }
