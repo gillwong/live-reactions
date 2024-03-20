@@ -6,7 +6,9 @@
   "scripts": {
     "web": "pnpm --filter web",
     "api": "pnpm --filter api",
-    "dev": "pnpm --stream -r dev" 
+    "dev": "pnpm --stream -r dev" ,
+    "build": "pnpm --stream -r build",
+    "start": "pnpm --stream -r start"
   },
   "keywords": [],
   "author": "",
