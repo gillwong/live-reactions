@@ -1,28 +1,24 @@
-"use client";
-
+import { forwardRef } from "react";
 import type { Location } from "@/utils/types";
-import { forwardRef, useContext } from "react";
-import { emojiContext } from "./emoji-context";
 
 export type ReactionProps = {
+  content: string;
   location: Location;
 };
 
 const Reaction = forwardRef<HTMLParagraphElement, ReactionProps>(
-  function Reaction({ location }, ref) {
-    const [emoji] = useContext(emojiContext);
-
+  function Reaction({ content, location }, ref) {
     return (
       <p
         ref={ref}
-        className="absolute"
+        className="absolute text-5xl"
         style={{
-          // 12 is half the size of the dot
-          left: location.x,
-          top: location.y,
+          // 24 is the size of the Emoji (guessing)
+          left: location.x - 24,
+          top: location.y - 24,
         }}
       >
-        {emoji}
+        {content}
       </p>
     );
   },
