@@ -1,0 +1,14 @@
+{
+  "name": "live-reactions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web": "pnpm --filter web",
+    "api": "pnpm --filter api",
+    "dev": "pnpm --stream -r dev" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
