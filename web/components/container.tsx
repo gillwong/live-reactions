@@ -41,7 +41,7 @@ export default function Container() {
   }
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8080");
+    const ws = new WebSocket(process.env.NEXT_PUBLIC_WS_URL ?? "ws://localhost:8080");
     ws.onopen = () => setSocket(ws);
     ws.onmessage = (event) => {
       try {
