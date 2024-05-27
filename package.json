@@ -8,7 +8,8 @@
     "api": "pnpm --filter api",
     "dev": "pnpm --stream -r dev",
     "build": "pnpm --stream -r build",
-    "start": "pnpm --stream -r start"
+    "start": "pnpm --stream -r start",
+    "docker:build": "pnpm --stream -r docker:build"
   },
   "keywords": [],
   "author": "",

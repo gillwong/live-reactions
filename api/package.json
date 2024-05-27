@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon --watch src",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "docker:build": "docker build -f ../Dockerfile --target api ..",
+    "docker:push": "docker buildx build --platform linux/amd64,linux/arm64 --provenance=mode=mac --sbom=true -f ../Dockerfile --target api --push -t gillwong/live-reactions-api:latest .."
   },
   "keywords": [],
   "author": "",
